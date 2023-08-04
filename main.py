@@ -9,8 +9,7 @@ from aqi import *
 # boturl = https://discord.com/api/oauth2/authorize?client_id=1136366300013273138&permissions=8&scope=bot
 
 ssl_context = ssl.create_default_context(cafile=certifi.where())
-
-token = 'MTEzNjM2NjMwMDAxMzI3MzEzOA.Gr7ej6.eK7UG4SjOepbBOhmRbPd2nklcC_xSGs-kpVS5E'
+token = 'ABCXYZ'
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='$', intents=intents, ssl_context=ssl_context)
 
