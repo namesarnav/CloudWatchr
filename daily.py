@@ -1,7 +1,7 @@
 from latlong import get_location_metadata
 import requests
 
-token = 'fcbce1667338efc93136ba2b43c558c9' #Put your API key here
+token = '' #Put your API key here
 
 '''
 Comments are test codes for when you have to access the JSON Output
