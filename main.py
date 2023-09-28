@@ -5,11 +5,18 @@ from daily import *
 from latlong import *
 from time_zone import *
 from aqi import *
+import os
+from dotenv import load_env
+load_env()
 
 # boturl = https://discord.com/api/oauth2/authorize?client_id=1136366300013273138&permissions=8&scope=bot
 
 ssl_context = ssl.create_default_context(cafile=certifi.where())
-token = 'ABCXYZ'
+
+'''
+Make a .env file and put your token there in a variable and fetch that varialbe here in getenv method
+'''
+token = os.getenv('DISCORD_TOKEN') 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='$', intents=intents, ssl_context=ssl_context)
 
