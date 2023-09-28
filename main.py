@@ -27,10 +27,17 @@ async def on_ready():
 
 @bot.command()
 async def ping(ctx):
+    '''
+    This function is just to check if the bot is responding or not
+    '''
     await ctx.send('pong')
 
 @bot.command()
 async def current(ctx, *loc):
+    '''
+    This function returns the current weather status of the given Location
+    '''
+    
     global final_location
     final_location = ' '.join(loc)
     lat = get_location_metadata(final_location)['lat']
@@ -47,9 +54,12 @@ async def current(ctx, *loc):
     final_string = f'Current weather conditions in {final_location.title()}\nTemp - `{temp}°C` \nMax Temp - {max_temp}°C \nMin Temp - {min_temp}°C \nFeels like - {feels_like}°C'
     await ctx.send(final_string)
 
+
 @bot.command()
 async def timezone(ctx, *loc):
-
+    '''
+    Get the timezone of the given location
+    '''
     final_location = ' '.join(loc)
     lat = get_location_metadata(final_location)['lat']
     lon = get_location_metadata(final_location)['lon']
